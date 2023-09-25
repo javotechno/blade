@@ -1,5 +1,8 @@
 const boxesContainer = document.getElementById('boxes')
+const sound = new Audio ('./sound/Beyblade.mp3')
 const btn = document.getElementById('btn')
+
+
 
 btn.addEventListener('click', () => boxesContainer.classList.toggle('big'))
 
@@ -14,4 +17,11 @@ function createBoxes() {
   }
 }
 
-createBoxes()
+function reproducir () {
+  sound.play() 
+  sound.volume = 0.02;
+}
+
+reproducir();
+
+createBoxes();
